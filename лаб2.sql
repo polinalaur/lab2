@@ -67,26 +67,26 @@ WHERE s.contact_phone IS NULL
    OR BTRIM(s.contact_phone) = ''
 ORDER BY p.track_number;
 --3. создатьтаблицу,содержащую данные вторпого запросас указанием информации оботправителях и параметров корресподенции--
-CREATE TABLE rezultat_27 AS
-SELECT
-    s.sender_id,
-    s.last_name,
-    s.first_name,
-    s.middle_name,
-    s.address,
-    s.passport_data,
-    s.contact_phone,
-    p.track_number,
-    p.correspondence_type_id,
-    p.weight,
-    p.length,
-    p.width,
-    p.height,
+SELECT 
+    s.sender_id, 
+    s.last_name, 
+    s.first_name, 
+    s.middle_name, 
+    s.address, 
+    s.passport_data, 
+    s.contact_phone, 
+    p.track_number, 
+    p.correspondence_type_id, 
+    p.weight, 
+    p.length, 
+    p.width, 
+    p.height, 
     p.stamps_amount
+INTO rezultat_27 
 FROM parcels AS p
-JOIN senders AS s
+JOIN senders AS s 
     ON s.sender_id = p.sender_id
-WHERE s.contact_phone IS NULL
+WHERE s.contact_phone IS NULL 
    OR BTRIM(s.contact_phone) = '';
 
 ALTER TABLE rezultat_27
