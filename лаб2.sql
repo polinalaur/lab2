@@ -31,6 +31,7 @@ INSERT INTO senders (last_name, first_name, middle_name, address, passport_data,
 ('Новикова',  'Ольга',    'Дмитриевна', 'г. Ростов-на-Дону, ул. Садовая, д. 33, кв. 6','6101 901234','+7 (909) 999-99-99'),
 ('Фёдоров',   'Михаил',   'Юрьевич',    'г. Краснодар, ул. Красная, д. 50, кв. 11',   '0301 012345', '+7 (910) 000-00-00');
 
+SELECT * FROM public.parcels
 ORDER BY track_number ASC;
 INSERT INTO parcels (track_number, correspondence_type_id, weight, length, width, height, sender_id, stamps_amount) VALUES
 ('RU123456789',  1, 0.02, 22.0, 11.0,  0.5, 1,  25.00),
